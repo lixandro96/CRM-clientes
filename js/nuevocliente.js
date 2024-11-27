@@ -1,3 +1,5 @@
+import { mensajeAlerta } from './funciones.js';
+
 ( function (){
 
   const formulario = document.querySelector('#formulario');
@@ -18,7 +20,7 @@
       empresa
     }
     if(validar(cliente)){
-      console.log('Todos los campos son Obligatorios')
+      mensajeAlerta('Todos los campos son obligatorios')
       return;
     }
     console.log('Validado');
