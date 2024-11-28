@@ -1,3 +1,4 @@
+import { eliminarCliente } from './API.js';
 export function mensajeAlerta(mensaje){
 
   const alerta  =  document.querySelector('.bg-red-100');
@@ -14,5 +15,17 @@ export function mensajeAlerta(mensaje){
       alerta.remove();
     }, 3000);
     formulario.appendChild(alerta);
+  }
+}
+
+export function confirmarEliminar(e){
+
+  if(e.target.classList.contains('eliminar')){
+    const clienteId = e.target.dataset.cliente  ;
+    const confirmacion = confirm(`¿Estás seguro que deseas eliminar el cliente?`);
+
+    if(confirmacion){
+      eliminarCliente(clienteId)
+    }
   }
 }

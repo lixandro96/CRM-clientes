@@ -1,9 +1,11 @@
 import { obtenerClientes } from './API.js';
+import { confirmarEliminar } from './funciones.js';
 (
   function (){
     const listado = document.querySelector('#listado-clientes');
 
     document.addEventListener('DOMContentLoaded', mostrarClientes);
+    listado.addEventListener('click', confirmarEliminar);
 
     async function mostrarClientes (){
       const clientes = await obtenerClientes();

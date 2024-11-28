@@ -1,6 +1,6 @@
 import { mensajeAlerta } from './funciones.js';
 import { nuevCliente } from './API.js';
-
+ 
 ( function (){
 
   const formulario = document.querySelector('#formulario');

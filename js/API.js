@@ -32,3 +32,16 @@ export const  obtenerClientes = async () => {
     console.error(error)
   }
 }
+
+// Eliminar cliente
+export const eliminarCliente = async id => {
+
+  try {
+    await fetch(`${url}/${id}`, {
+      method: 'DELETE'
+    })
+    window.location.href = 'index.html'
+  } catch (error) {
+    console.log(error)
+  }
+}
