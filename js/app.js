@@ -32,8 +32,5 @@ import { confirmarEliminar } from './funciones.js';
         listado.appendChild(row);
       })
     }
-
-
-
   }
 )()

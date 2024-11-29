@@ -1,4 +1,4 @@
-import { mensajeAlerta } from './funciones.js';
+import { mensajeAlerta,validar } from './funciones.js';
 import { nuevCliente } from './API.js';
  
 ( function (){
@@ -24,13 +24,8 @@ import { nuevCliente } from './API.js';
       mensajeAlerta('Todos los campos son obligatorios')
       return;
     }
-   nuevCliente(cliente);
+    nuevCliente(cliente);
 
   }
-
-  function validar(obj){
-    return !Object.values(obj).every(input => input !== '');
-  }
-
 })()
 

@@ -1,4 +1,5 @@
-import { eliminarCliente } from './API.js';
+import { eliminarCliente, editarCliente } from './API.js';
+import { nombreInput, emailInput, telefonoInput, empresaInput, idInput } from './selectores.js';
 export function mensajeAlerta(mensaje){
 
   const alerta  =  document.querySelector('.bg-red-100');
@@ -28,4 +29,36 @@ export function confirmarEliminar(e){
       eliminarCliente(clienteId)
     }
   }
+}
+export function mostrarCliente(cliente){
+
+
+  const {nombre, email, telefono, empresa,id} = cliente;
+
+  nombreInput.value = nombre;
+  emailInput.value = email;
+  telefonoInput.value = telefono;
+  empresaInput.value = empresa;
+  idInput.value = id;
+  
+}
+export function validar(obj){
+    return !Object.values(obj).every(input => input !== '');
+}
+export function validarClienteEdicion(e){
+  e.preventDefault();
+
+  const cliente = {
+    nombre: nombreInput.value,
+    email: emailInput.value,
+    telefono: telefonoInput.value,
+    empresa: empresaInput.value,
+    id: idInput.value
+  }
+    
+  if(validar(cliente)){
+      mensajeAlerta('Todos los campos son obligatorios')
+      return;
+  }
+  editarCliente(cliente)
 }

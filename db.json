@@ -6,6 +6,20 @@
       "email": "correo@correo.com",
       "telefono": "1234567891",
       "empresa": "LixandroDev"
+    },
+    {
+      "nombre": "Juan Pablo",
+      "email": "correo@correo.com",
+      "telefono": "4578954658",
+      "empresa": "aprendiendo Javascript",
+      "id": "78f6"
+    },
+    {
+      "id": "fa5a",
+      "nombre": "Martin Rosado",
+      "email": "correo@correo.com",
+      "telefono": "124578954",
+      "empresa": "lixandroDev"
     }
   ]
 }
